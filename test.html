@@ -49,7 +49,7 @@
             // 10 times a second. Also ensure that when disconnected, Puck.js
             // resets so the setInterval doesn't keep draining battery.
             connection.write(
-              "NRF.setScan((device)=>{Serial1.println(JSON.stringify({rssi:device.rssi}));},{filters:[{id:'db:cb:94:5f:9d:4e random'}]});",
+              "NRF.setScan((device)=>{Serial1.println(JSON.stringify({rssi:device.rssi}));},{filters:[{id:'db:cb:94:5f:9d:4e random'}]});\n",
               () => { console.log('Ready...'); });
           }, 1500);
         });
